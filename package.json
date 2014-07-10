@@ -1,0 +1,27 @@
+{
+  "name": "gitShowBranchParser",
+  "version": "0.0.0",
+  "description": "Parse output of `git show-branch` to a JS object",
+  "main": "lib/parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dylancwood/gitShowBranchParser.git"
+  },
+  "keywords": [
+    "git",
+    "show-branch"
+  ],
+  "author": "Dylan Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylancwood/gitShowBranchParser/issues"
+  },
+  "homepage": "https://github.com/dylancwood/gitShowBranchParser",
+  "dependencies": {
+    "rsvp": "~3.0.9",
+    "underscore": "~1.6.0"
+  }
+}
