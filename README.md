@@ -24,7 +24,7 @@ var showBranchParser = require('git-show-branch-parser');
 ### Parse!
 ```js
 showBranchParser('path/to/show-branch/output.txt', function (err, obj) {
-    console.log(JSON.strinify(obj, null, 4));
+    console.log(JSON.stringify(obj, null, 4));
 });
 ```
 ### Or use promises:
@@ -32,7 +32,7 @@ This function returns an RSVP promise.
 ```js
 var sbpPromise = showBranchParser('path/to/show-branch/output.txt');
 sbpPromise.then(function (obj) {
-    console.log(JSON.strinify(obj, null, 4));
+    console.log(JSON.stringify(obj, null, 4));
 }).catch(function (err) {
     console.assert(false, err);
 });
@@ -99,7 +99,7 @@ using this utility:
 ```js
 var showBranchParser = require('git-show-branch-parser');
 showBranchParser('path/to/show-branch/output.txt', function (err, obj) {
-    console.log(JSON.strinify(obj, null, 4));
+    console.log(JSON.stringify(obj, null, 4));
 });
 ```
 
