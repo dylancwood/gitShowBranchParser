@@ -28,7 +28,7 @@ var showBranchObj = showBranchParser('path/to/show-branch/output.txt');
 
 ## Object Structure:
 The `git show-branch` output is parsed into an object of the following form:
-```json
+```
 {
     branches: [
         {
