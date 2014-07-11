@@ -11,19 +11,31 @@ display this information on a web page, or use it in an application.
 javascript object.
 
 ## Usage
-Install this module in your project:
+### Install
 ```shell
 npm install git-show-branch-parser
 ```
 
-Require the module in your application source code:
+### Require
 ```js
 var showBranchParser = require('git-show-branch-parser');
 ```
 
-Parse!
+### Parse!
 ```js
-var showBranchObj = showBranchParser('path/to/show-branch/output.txt');
+showBranchParser('path/to/show-branch/output.txt', function (err, obj) {
+    console.log(JSON.strinify(obj, null, 4));
+});
+```
+### Or use promises:
+This function returns an RSVP promise.
+```js
+var sbpPromise = showBranchParser('path/to/show-branch/output.txt');
+sbpPromise.then(function (obj) {
+    console.log(JSON.strinify(obj, null, 4));
+}).catch(function (err) {
+    console.assert(false, err);
+});
 ```
 
 ## Object Structure:
@@ -86,8 +98,9 @@ By writing the output from `git show-branch`, we can later parse it into a JavaS
 using this utility:
 ```js
 var showBranchParser = require('git-show-branch-parser');
-var showBranchObj = showBranchParser('path/to/show-branch/output.txt');
-console.log(JSON.stringify(showBranchObj, null, 4));
+showBranchParser('path/to/show-branch/output.txt', function (err, obj) {
+    console.log(JSON.strinify(obj, null, 4));
+});
 ```
 
 The above code will print the following:
