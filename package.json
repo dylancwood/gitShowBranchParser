@@ -1,6 +1,6 @@
 {
   "name": "git-show-branch-parser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parse output of `git show-branch` to a JS object",
   "main": "lib/parser.js",
   "scripts": {
