@@ -26,6 +26,33 @@ Parse!
 var showBranchObj = showBranchParser('path/to/show-branch/output.txt');
 ```
 
+## Object Structure:
+The `git show-branch` output is parsed into an object of the following form:
+```json
+{
+    branches: [
+        {
+            label: '...',
+            latestCommit: '...'
+        },
+        ...
+    ],
+    commits: [
+        {
+            label: '...',
+            commitMessage: '...',
+            branches: // order mimics that of the branches array above
+                [
+                    boolean, // true if commit is in corresponding branch
+                    boolean, // true if commit is in corresponding branch
+                    ...
+                ]
+        },
+        ...
+    ]
+}
+```
+
 ## Details
 For details about how to use `git show-branch`, refer to the documentation: 
 https://www.kernel.org/pub/software/scm/git/docs/git-show-branch.html
